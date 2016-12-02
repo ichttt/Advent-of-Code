@@ -56,8 +56,7 @@ public class Day1 {
     public static void main(String args[]) {
         String[] split = path.split(",");
         for(String s:split) {
-            if(s.startsWith(" "))
-                s = s.substring(1);
+            s = s.trim();
 
             assert s.length() >=2;
             if(s.startsWith("R"))
@@ -69,6 +68,6 @@ public class Day1 {
             walk(Integer.parseInt(s.substring(1)));
         }
         
-        System.out.println(posX + posY);
+        System.out.println(Math.abs(posX) + Math.abs(posY));
     }
 }
