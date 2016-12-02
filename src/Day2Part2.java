@@ -1,7 +1,7 @@
 /**
  * Created by Tobias on 02.12.2016.
  */
-public class Day2 {
+public class Day2Part2 {
 
     private static final String[] commandList = loadFile.load("Day2");
 
@@ -15,33 +15,34 @@ public class Day2 {
 
     /**
      * 0 = left
-     * 1= middle
-     * 2 = right
+     * 2= middle
+     * 4 = right
      */
     private static int posX;
+
     /**
      * 0 = Up
-     * 1= middle
-     * 2 = down
+     * 2= middle
+     * 4 = down
      */
     private static int posY;
 
     private static void walk() {
         switch (facing) {
             case 0:
-                if(posY!=0)
+                if(posY!=0&&posX==2||posY>1&&(posX==1||posX==3))
                     posY += -1;
                 break;
             case 1:
-                if(posX!=2)
+                if(posX!=4&&posY==2||posX<3&&(posY==1||posY==3))
                     posX += 1;
                 break;
             case 2:
-                if(posY!=2)
+                if(posY!=4&&posX==2||posY<3&&(posX==1||posX==3))
                     posY += 1;
                 break;
             case 3:
-                if(posX!=0)
+                if(posX!=0&&posY==2||posX>1&&(posY==1||posY==3))
                     posX += -1;
                 break;
             default:
@@ -50,8 +51,8 @@ public class Day2 {
     }
 
     public static void main(String args[]) {
-        posX = 1;
-        posY = 1;
+        posX = 0;
+        posY = 2;
         for(String s1:commandList) {
             char[] commandChar = s1.toCharArray();
             for (char c : commandChar) {
@@ -75,7 +76,27 @@ public class Day2 {
                 walk();
 
             }
-            System.out.println(posX + posY * 3 + 1);
+            switch(posY) {
+                case 0:
+                    System.out.println(1);
+                    break;
+                case 1:
+                    System.out.println(posX+1);
+                    break;
+                case 2:
+                    System.out.println(posX+5);
+                    break;
+                case 3:
+                    if(posX==1)
+                        System.out.println("A");
+                    else if(posX==2)
+                        System.out.println("B");
+                    else
+                        System.out.println("C");
+                    break;
+                case 4:
+                    System.out.println("D");
+            }
         }
     }
 }
