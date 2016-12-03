@@ -94,7 +94,7 @@ public class Day1Part2 {
         }
     }
 
-    private static final String path = loadFile.load("ichttt.challenges.Day1")[0];
+    private static final String path = loadFile.load("Day1")[0];
     public static void main(String args[]) {
         String[] split = path.split(",");
         for(String s:split) {

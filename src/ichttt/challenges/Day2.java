@@ -7,7 +7,7 @@ import ichttt.commons.loadFile;
  */
 public class Day2 {
 
-    private static final String[] commandList = loadFile.load("ichttt.challenges.Day2");
+    private static final String[] commandList = loadFile.load("Day2");
 
     /**
      * O = North,
