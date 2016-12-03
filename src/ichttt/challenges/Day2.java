@@ -1,9 +1,13 @@
+package ichttt.challenges;
+
+import ichttt.commons.loadFile;
+
 /**
  * Created by Tobias on 02.12.2016.
  */
 public class Day2 {
 
-    private static final String[] commandList = loadFile.load("Day2");
+    private static final String[] commandList = loadFile.load("ichttt.challenges.Day2");
 
     /**
      * O = North,
