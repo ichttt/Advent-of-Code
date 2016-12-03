@@ -8,7 +8,7 @@ import java.util.List;
  * Created by Tobias on 02.12.2016.
  */
 public class loadFile {
-    private static String path = System.getProperty("user.home") + "\\AdventofCode\\";
+    private static final String path = System.getProperty("user.home") + "\\AdventofCode\\";
     public static String[] load(String file) {
         String line;
         List<String> strings = new ArrayList<String>();
