@@ -56,7 +56,7 @@ public class Day1 {
         }
     }
 
-    private static final String path = loadFile.load("Day1")[0];
+    private static final String path = loadFile.loadFirstLine("Day1");
     public static void main(String args[]) {
         String[] split = path.split(",");
         for(String s:split) {

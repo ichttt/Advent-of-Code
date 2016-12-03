@@ -6,7 +6,7 @@ import ichttt.commons.loadFile;
  * Created by Tobias on 03.12.2016.
  */
 public class Day3 {
-    private static final String[] commandList = loadFile.load("Day3");
+    private static final String[] commandList = loadFile.loadAll("Day3");
 
     public static void main(String args[]) {
         int[] ints = new int[3];
