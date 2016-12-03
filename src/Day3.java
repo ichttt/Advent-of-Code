@@ -2,10 +2,11 @@
  * Created by Tobias on 03.12.2016.
  */
 public class Day3 {
-    private static int[] ints = new int[3];
-    private static int validCount = 0;
-    private static String[] commandList = loadFile.load("Day3");
+    private static final String[] commandList = loadFile.load("Day3");
+    
     public static void main(String args[]) {
+        int[] ints = new int[3];
+        int validCount = 0;
         for(String cmd:commandList) {
             String split[] = new String[3];
             split[0] = cmd.substring(2,5);
